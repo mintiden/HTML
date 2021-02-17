@@ -171,3 +171,140 @@ nav ul li a{
     margin-bottom: 40px;
     text-align: left;
 }
+/*PORTFOLIO*/
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.main h1{
+    position: relative;
+    height: auto;
+    width: 550px;
+    left: 50%;
+    transform: translateX(-50);
+    margin: 5% 0 2% 0;
+    text-align:center;
+    font-size: 2.8em;
+    font-weight: 650;
+    letter-spacing: 5px;
+    color: #000;
+    border-left: 5px solid #80ACB3;
+    border-right: 5px solid #80ACB3;
+    background: rgba(0,0,0,0.05);
+}
+.main .gallery{
+    position: relative;
+    height: auto;
+    width: 95%;
+    margin: auto;
+    padding: 45px 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2vh;
+    grid-auto-flow: dense;
+}
+
+.main .gallery .img{
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.09);
+    border-radius: 2px;
+}
+
+.main .gallery .img:first-child{
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(2n+3){
+    grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(4n+5){
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(6n+7){
+    grid-row-start: 1;
+}
+.main .gallery .img:nth-child(8n+9){
+    grid-row-start: 1;
+}
+.main .gallery .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) grayscale(100);
+    transition: 0.3s ease-in-out ;
+}
+.main .gallery .img:hover img{
+    filter: brightness(1) grayscale(0);
+}
+@media screen and (max-width:768px){
+    .main h1{
+        font-size: 2.2em;
+        width: 400px;
+        }
+        .main p{
+            font-size: 1.2em;
+        }
+    .main .gallery{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width:425px){
+    .main h1{
+        font-size: 1.2em;
+        width: 300px;
+        }
+        .main p{
+            font-size: 0.90em;
+        }
+    .main .gallery{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .main .gallery .img{
+        display: block;
+        width:100%
+    }
+    .main .gallery .img img{
+        filter: brightness(1) grayscale(0);
+    }
+}
+/*PORTFOLIO*/
+#media{
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+/*CONTACTS*/
+.follow{
+    position: center;
+    height: 20vh;
+    width: 100%;
+}
+.follow h1{
+    position: center;
+    height: auto;
+    width: 550px;
+    left: 50%;
+    transform: translateX(-50);
+    margin:0 10px;
+    padding:12px 0;
+    text-align:center;
+    font-size: 2.8em;
+    font-weight: 650;
+    letter-spacing: 5px;
+    color: #000;
+    
+}
+
+.links{
+    font-size: 30px;
+    text-align: center;
+    margin:0 10px;
+    padding:12px 0;
+}
