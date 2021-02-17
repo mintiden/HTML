@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="lv">
+    <!-- Galvenie iestastījumi -->
+<head>
+    <title>Julija's Portfolio</title>
+    <!-- Savienojums ar style.css dokumentu -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lapas ikona -->
+    <link rel="icon" href="img/camera.ico">
+    <meta name="viewport" content="width=device-width, intial-scale= 1.0">
+    </head>
+    <body>
+        <!-- Logotips, sveikums -->
+        <section id="banner">
+            <img src="img/logo.png" class="logo">
+            <div class="banner-text">
+                <h1>Julija's Portfolio</h1>
+                <p>Hello there! Welcome to my portfolio. Please go here for more information:</p>
+                <!-- Links-->
+                <div class="banner-btn">
+                    <a href="#aboutme"><span></span> About Me</a>
+                    <a href="#"><span></span>My Portfolio</a>
+                    <a href="#"><span></span>Contact me</a>
+                </div>
+            </div>
+        </section>
+<!-- Navigācijas menu -->
+        <div id="sideNavigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#aboutme">ABOUT ME</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                    <li><a href="#">CONTACT ME</a></li>
+                </ul>
+            </nav>
+        </div>
+<!-- Menu poga -->
+        <div id="menuBtn">
+            <img src="img/menu.png" id="menu">
+        </div>
+        <!-- About me -->
+        <section id="aboutme">
+            <div class="title-text">
+                <h1>ABOUT ME</h1>
+            </div>
+            
+            <div class="aboutme-box">
+                <div class="about-me">
+                    <h1>I'm an Amateur Photographer, from Riga, Latvia.</h1>
+                    <div class="aboutme-desc">
+                        <div class="aboutme-text">
+                            <p>An “amateur” photographer is someone that takes photos for fun and passion. They enjoy the art of photography, and appreciate the ability to preserve memories and moments. Despite being “amateur”, they can take some of the most beautiful and breathtaking images you'll ever see</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-me-img">
+                    <img src="img/aboutme.jpg">
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+        <!-- Menu animācija -->
+        <script>
+            var menuBtn = document.getElementById("menuBtn")
+            var sideNavigation = document.getElementById("sideNavigation")
+            var menu = document.getElementById("menu")
+
+            sideNavigation.style.right = "-250px";
+
+            menuBtn.onclick = function(){
+                if(sideNavigation.style.right == "-250px"){
+                    sideNavigation.style.right = "0";
+                   
+                } else{
+                    sideNavigation.style.right = "-250px";
+                }
+            }
+        </script>
+ <!-- Smooth Scrolling -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script> 
+    </body>
+    </html>
